@@ -8,6 +8,11 @@
       "start": "node server.js",
       "seed": "node seeds/index.js"
     },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Adam42288/mvc-tech-blog"
+    },
+    "homepage": "https://github.com/Adam42288/mvc-tech-blog#readme",
     "author": "Adam Santillana",
     "license": "MIT",
     "dependencies": {
@@ -17,7 +22,7 @@
       "express": "^4.17.1",
       "express-handlebars": "^5.2.0",
       "express-session": "^1.17.1",
-      "handlebars": "^4.7.6",
+      "nodemon": "^2.0.7",
       "mysql2": "^2.2.5",
       "sequelize": "^6.3.5"
     }
