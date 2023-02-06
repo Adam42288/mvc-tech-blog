@@ -55,6 +55,7 @@ router.get("/signup", (req, res) => {
 
 // Single post page
 router.get("/post/:id", (req, res) => {
+  console.log("error is happening at the start of the single post route");
   Post.findOne({
     where: {
       id: req.params.id,
