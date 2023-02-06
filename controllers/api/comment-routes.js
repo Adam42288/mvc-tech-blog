@@ -11,15 +11,20 @@ router.get("/", async (req, res) => {
     }
     res.status(200).json(commentData);
   } catch (err) {
+    console.log("this is an issue getting all comments");
     res.status(500).json(err);
   }
 });
 
 router.get("/:id", async (req, res) => {
   try {
+    console.log("this is an issue getting a comment after the TRY");
     const commentData = await Comment.findAll({
       where: { id: req.params.id },
     });
+    console.log(
+      "this is an issue getting a comment after the TRY before the IF"
+    );
     if (commentData.length === 0) {
       res
         .status(404)
@@ -28,6 +33,7 @@ router.get("/:id", async (req, res) => {
     }
     res.status(200).json(commentData);
   } catch (err) {
+    console.log("this is an issue getting a single comment");
     res.status(500).json(err);
   }
 });
